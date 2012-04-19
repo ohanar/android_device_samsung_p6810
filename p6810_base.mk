@@ -22,9 +22,9 @@ PRODUCT_LOCALES += hdpi
 
 # needs to be overwritten to get android to scale appropriately
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sf.lcd_density=160
+    ro.sf.lcd_density=160
 
 # Init files
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/init.smdkc210.rc:root/init.smdkc210.rc \
-	$(LOCAL_PATH)/lpm.rc:root/lpm.rc
+    $(LOCAL_PATH)/init.smdkc210.rc:root/init.smdkc210.rc \
+    $(LOCAL_PATH)/lpm.rc:root/lpm.rc
