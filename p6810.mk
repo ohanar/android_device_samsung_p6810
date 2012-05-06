@@ -16,11 +16,11 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-$(call inherit-product, device/samsung/c210-common/c210_base.mk)
+$(call inherit-product, device/samsung/exynos4tab-common/exynos4tab_base.mk)
 
 $(call inherit-product, $(LOCAL_PATH)/p6810_base.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/c210-common/c210-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/exynos4tab-common/exynos4tab-common-vendor.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/p6810/p6810-vendor.mk)
 
