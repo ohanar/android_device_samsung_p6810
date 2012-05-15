@@ -1,5 +1,3 @@
-import lpm.common.rc
-
 on fs
     mount ext4 /dev/block/mmcblk0p8 /system wait ro
     mount ext4 /dev/block/mmcblk0p9 /data nosuid nodev noatime wait

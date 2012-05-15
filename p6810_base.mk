@@ -27,4 +27,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Init files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.smdk4210.fstab.rc:root/init.smdk4210.fstab.rc \
-    $(LOCAL_PATH)/lpm.rc:root/lpm.rc
+    $(LOCAL_PATH)/lpm.fstab.rc:root/lpm.fstab.rc
