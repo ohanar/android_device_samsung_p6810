@@ -22,7 +22,7 @@ $(call inherit-product, $(LOCAL_PATH)/p6810_base.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/smdk4210-tab/smdk4210-tab_base.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/p6810/p6810-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/p6810/p6810_base.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := p6810
