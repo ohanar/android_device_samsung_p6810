@@ -15,15 +15,18 @@
 
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, device/samsung/smdk4210-tab/smdk4210-tab_base.mk)
-$(call inherit-product-if-exists, vendor/samsung/smdk4210-tab/smdk4210-tab_base.mk)
-$(call inherit-product-if-exists, vendor/samsung/p6810/p6810_base.mk)
+$(call inherit-product, device/samsung/smdk4210-tab/device.mk)
+$(call inherit-product-if-exists, vendor/samsung/smdk4210-tab/vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/p6810/vendor.mk)
 
 # the Tab 7.7 has a xlarge hpdi screen
 PRODUCT_AAPT_CONFIG := xlarge hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_LOCALES += hdpi
 
-# needs to be overwritten to get android to scale appropriately
+# RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=160
+    rild.libpath=/system/lib/libsec-ril-apalone.so \
+    rild.libargs=-d /dev/ttyS0 \
+    keyguard.no_require_sim=true \
+    ro.carrier=wifi-only
