@@ -27,3 +27,6 @@ PRODUCT_COPY_FILES += \
 # International variants have proximity sensor
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml
+
+PRODUCT_PACKAGES += \
+	libsecril-client

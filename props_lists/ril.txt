@@ -1,5 +1,4 @@
 system/bin/rild
-system/lib/libril.so:libsamsungril
+system/lib/libril.so
 system/lib/libsec-ril.so
 system/lib/libsec-ril-apalone.so
-system/lib/libsecril-client.so:libsecril-client
