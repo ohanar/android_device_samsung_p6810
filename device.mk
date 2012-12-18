@@ -13,14 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product, device/samsung/smdk4210-tab/device.mk)
+$(call inherit-product-if-exists, vendor/samsung/p6810/vendor.mk)
+
 # Set preferred size for assets
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, device/samsung/smdk4210-tab/device.mk)
-$(call inherit-product-if-exists, vendor/samsung/smdk4210-tab/vendor.mk)
-$(call inherit-product-if-exists, vendor/samsung/p6810/vendor.mk)
+# Audio
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/etc/tinyalsa-audio.xml:system/etc/tinyalsa-audio.xml \
+	$(LOCAL_PATH)/configs/etc/audio_policy.conf:system/etc/audio_policy.conf
 
+# International variants have proximity sensor
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml
