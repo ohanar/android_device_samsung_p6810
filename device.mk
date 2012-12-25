@@ -28,5 +28,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml
 
+# GPS
+PRODUCT_COPY_FILES += \
+	device/samsung/smdk4210-tab/init.smdk4210.gps.rc:root/init.smdk4210.gps.rc \
+	device/samsung/smdk4210-tab/configs/etc/gps.xml:system/etc/gps.xml
+
 PRODUCT_PACKAGES += \
 	libsecril-client
